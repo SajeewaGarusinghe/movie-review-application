@@ -1,0 +1,35 @@
+
+----------database configuration--------------
+
+----------postgressql-------------------
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/spring_mvc
+spring.datasource.username=postgres
+spring.datasource.password=1234
+spring.jpa.hibernate.ddl-auto=update
+
+spring.jpa.show-sql=true
+
+
+-----------mongodb--------------------
+
+spring.data.mongodb.database=${env.MONGO_DATABASE}
+spring.data.mongodb.uri=mongodb+srv://${env.MONGO_USER}:${env.MONGO_PASSWORD}@${env.MONGO_CLUSTER}
+
+MONGO_DATABASE="movie-review-java"
+MONGO_USER="sajeewa"
+MONGO_PASSWORD="sajeewa1234"
+MONGO_CLUSTER="sajeewacluster.aabhgdf.mongodb.net"
+
+//full version
+
+spring.data.mongodb.database=movie-review-java
+spring.data.mongodb.uri=mongodb+srv://sajeewa:sajeewa1234@sajeewacluster.aabhgdf.mongodb.net/movie-review-java
+
+//related depenancy
+
+	<dependency>
+		<groupId>me.paulschwarz</groupId>
+		<artifactId>spring-dotenv</artifactId>
+		<version>2.5.4</version>
+	</dependency>
